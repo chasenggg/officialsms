@@ -8,70 +8,68 @@
 body{
     background-color: #dbd0d0;
 }
-.container{
-    background-color: #ffffff;
-    width: 450px;
-    height: 800px;
-    padding: 50px 30px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 8px;
-    box-shadow:  0 20px 25px rgba(0,0,0,0.25);
+.navtop {
+	background-color: #2f3947;
+	height: 60px;
+	width: 100%;
+	border: 0;
 }
-.container *{
-    font-family: "Poppins",sans-serif;
-    font-size: 16px;
+.navtop div {
+	display: flex;
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
 }
-textarea{
-    display: block;
-    width: 100%;
-    height: 35%;
-    resize: none;
-    padding: 20px;
-    color: #202020;
-    border: 1.5px solid #b2b2b2;
-    border-radius: 5px;
-    outline: none;
+.navtop div h1, .navtop div a {
+	display: inline-flex;
+	align-items: center;
 }
-p{
-    width: 100%;
-    text-align: right;
-    margin-top: 15px;
-    color: #737373;
+.navtop div h1 {
+	flex: 1;
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+	color: #eaebed;
+	font-weight: normal;
 }
-
-input[type=submit]{
-    display: block;
-    width: 100%;
-    resize: none;
-    padding: 10px;
-    color: #202020;
-    border: 1.5px solid #b2b2b2;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
+.navtop div a {
+	padding: 0 20px;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
 }
-
-.button {
-    width: 20%;
-    resize: none;
-    padding: 10px;
-    color: #202020;
-    border: 1.5px solid #b2b2b2;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-} 
-
-input[type=number]{
-    width: 78%;
-    resize: none;
-    padding: 10px;
-    color: #202020;
-    border: 1.5px solid #b2b2b2;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+	color: #eaebed;
+}
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.content > p, .content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+.content > p table td, .content > div table td {
+	padding: 5px;
+}
+.content > p table td:first-child, .content > div table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+.content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
 }

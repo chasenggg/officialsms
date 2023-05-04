@@ -14,7 +14,7 @@ body {
 .container {
   background-color: #ffffff;
   width: 450px;
-  height: 350px;
+  height: 800px;
   padding: 50px 30px;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -29,7 +29,18 @@ body {
   font-size: 16px;
 }
 
-input[type="login"], input[type="password"]{
+.container form label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #3274d6;
+  color: #ffffff;
+}
+
+input[type="login"],
+input[type="password"] {
   display: block;
   width: 100%;
   resize: none;
@@ -50,6 +61,11 @@ input[type="submit"] {
   border-radius: 5px;
   outline: none;
   margin: auto;
+}
+
+input[type="submit"]:hover {
+  background-color: #b89999;
+  transition: background-color 0.2s;
 }
 
 p {

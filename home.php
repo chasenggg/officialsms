@@ -1,47 +1,37 @@
+<?php
+/*
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: login.php');
+    exit;
+} 
+*/
+?>
+
+<!DOCTYPE html>
+<html>
+
 <head>
-    <title> Home </title>
-    <!--Google Font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <link rel="stylesheet" href="home.css">
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link href="home.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
-<body>
-    <div class="container">
-        <h1> Official SMS </h1>
-        <form action="" method="post">
-
-            <input type="number" name="number" onKeyPress="if(this.value.length==11) return false;" id="contact-input">
-
-            <button type="button" class="add button" onclick="addContact()">Add</button>
-            <br></br>
-
-            <textarea id="my-text" rows="5" placeholder="Type something here.." required maxlength="160"></textarea>
-
-            <p id="result"></p>
-
-            <input type="hidden" name="numbers" id="hidden-numbers">
-            <br></br>
-
-            <input type="submit" name="submit" placeholder="Send here" value="Send" required>
-            <br></br>
-
-        </form>
-
-        <a class="goback" href="login.php"> Back </a>
-
-        <?php
-        if (isset($_POST['submit'])) {
-            $number = $_POST['numbers'];
-            echo $number;
-        }
-        ?>
-
-
+<body class="loggedin">
+    <nav class="navtop">
+        <div>
+            <h1>Website Title</h1>
+            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h2>Home Page</h2>
+        <p>Welcome back, <?= $_SESSION['name'] ?>!</p>
     </div>
-    <script src="script.js"></script>
-
 </body>
 
 </html>
