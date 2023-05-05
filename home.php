@@ -1,13 +1,11 @@
 <?php
-/*
-// We need to use sessions, so you should always start sessions using the below code.
+
 session_start();
-// If the user is not logged in redirect to the login page...
+
 if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
     exit;
 } 
-*/
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +21,8 @@ if (!isset($_SESSION['loggedin'])) {
 <body class="loggedin">
     <nav class="navtop">
         <div>
-            <h1>Website Title</h1>
-            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <h1>PHMC</h1>
+            <a href="sms.php"><i class="fas fa-solid fa-message"></i>SMS</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </div>
     </nav>

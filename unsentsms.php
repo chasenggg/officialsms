@@ -47,9 +47,7 @@ $stmt->close();
     <div class="menu">
         <h1> Menu </h1>
 
-        <button type="button" href="sms.php" class="buttons menu"> Send Message </button>
-        <br></br>
-
+      
 
     </div>
 
