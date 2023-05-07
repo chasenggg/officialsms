@@ -4,6 +4,7 @@ var limit = 160;
 result.textContent = 0 + "/" + limit;
 let x = []
 
+//count characters
 myText.addEventListener("input",function(){
     var textLength = myText.value.length;
     result.textContent = textLength + "/" + limit;

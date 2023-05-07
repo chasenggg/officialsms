@@ -45,7 +45,7 @@ $stmt->close();
     </nav>
 
     <div class="menu">
-        <h1> Menu </h1>
+    <h1> Menu </h1>
         <br></br>
 
         <a href="sms.php"><button type="button" class="sms button"> Send Message </button></a>
@@ -55,62 +55,25 @@ $stmt->close();
         <a href="smsdelete.php"><button type="button" class="sms button"> Delete Message </button></a>
         <br></br>
 
-
     </div>
 
     <div class="container">
-        <h1> Send Messages </h1>
+        <h1> Unsent Messages </h1>
         <br>
         <form action="" method="post">
 
-            <input type="number" name="number" onKeyPress="if(this.value.length==11) return false;" id="contact-input" placeholder="Input number here..">
-
-            <button type="button" class="add button" onclick="addContact()"> Add </button>
-            <br></br>
-
-            <textarea id="my-text" rows="5" placeholder="Type something here.." required maxlength="160"></textarea>
-
-            <p id="result"></p>
-
-            <input type="hidden" name="numbers" id="hidden-numbers">
-            <br></br>
-
-            <input type="submit" name="submit" placeholder="Send here" value="Send" required>
-            <br></br>
+          
 
         </form>
 
         <?php
-        //for input db
-        /*
-        $number = $_POST['number'];
-        $mytext = $_POST['my-text'];
-        
-        $conn = new mysqli('localhost','root','','phplogin');
-        
-        if ($conn->connect_error){
-            die('Connection Failed : '.$conn->connect_error);
-        }else{
-            $stmt = $conn->prepare("insert into messages(number, mytext) values(?, ?)");
-            $stmr->bind_param("is",$number, $mytext);
-            $stmt->execute();
-            echo "Message sent successfully...";
-            $stmt->close();
-        }
-        */
-
-        if (isset($_POST['submit'])) {
-            $number = $_POST['numbers'];
-           // echo "<fieldset> <legend> Recipient </legend>";
-            echo $number;
-            //echo " </fieldset>";
-        }
+      
         ?>
 
         
 
     </div>
-    <script src="script.js"></script>
+    
 
 </body>
 
