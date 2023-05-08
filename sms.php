@@ -6,7 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-$DATABASE_HOST = 'localhost';                                                                      
+$DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'officialsms'; //database name
@@ -45,25 +45,36 @@ $stmt->close();
     </nav>
 
     <div class="menu">
-        <h1> Menu </h1>
+        <h1> Main Menu </h1>
         <br></br>
 
-        <a href="sms.php"><button type="button" class="sms button"> Send Message </button></a>
+        <a href="sms.php"><button type="button" class="sms button"> Create New Message </button></a>
         <br></br>
-        <a href="smsunsent.php"><button type="button" class="sms button"> Unsend Message </button></a>
+        <a href="smsinbox.php"><button type="button" class="sms button"> Inbox </button></a>
         <br></br>
-        <a href="smsdelete.php"><button type="button" class="sms button"> Delete Message </button></a>
+        <a href="smssent.php"><button type="button" class="sms button"> Sent Messages </button></a>
         <br></br>
-
+        <a href="smsunsent.php"><button type="button" class="sms button"> Unsent Messages </button></a>
+        <br></br>
+        <a href="smsqueued.php"><button type="button" class="sms button"> Queued Messages </button></a>
+        <br></br>
+        <a href="smsbroadcast.php"><button type="button" class="sms button"> Broadcast Messages </button></a>
+        <br></br>
+        <a href="smsbroadcastsent.php"><button type="button" class="sms button"> Broadcast Sent Messages </button></a>
+        <br></br>
+        <a href="smsbroadcastunsent.php"><button type="button" class="sms button"> Broadcast Unsent Messages </button></a>
+        <br></br>
 
     </div>
 
     <div class="container">
-        <h1> Send Messages </h1>
+        <h1> Create New Messages </h1>
         <br>
         <form action="" method="post">
 
             <input type="number" name="number" onKeyPress="if(this.value.length==11) return false;" id="contact-input" placeholder="Input number here..">
+
+            <a href="smscontacts.php"><button type="button" class="contact button"> Contacts </button></a>
 
             <button type="button" class="add button" onclick="addContact()"> Add </button>
             <br></br>
@@ -101,13 +112,13 @@ $stmt->close();
 
         if (isset($_POST['submit'])) {
             $number = $_POST['numbers'];
-           // echo "<fieldset> <legend> Recipient </legend>";
+            // echo "<fieldset> <legend> Recipient </legend>";
             echo $number;
             //echo " </fieldset>";
         }
         ?>
 
-        
+
 
     </div>
     <script src="script.js"></script>

@@ -49,7 +49,7 @@ body{
 .menu{
     background-color: #ffffff;
     width: 450px;
-    height: 700px;
+    height: 730px;
     padding: 50px 30px;
     margin: 20px;
     position: absolute;
@@ -66,9 +66,9 @@ body{
 
 .button[class="sms button"] {
     width: 100%;
-    height: 15%;
+    height: 9%;
     resize: none;
-    padding: 10px;
+    padding: 1px;
     color: #202020;
     border: 1.5px solid #b2b2b2;
     border-radius: 5px;
@@ -84,7 +84,7 @@ body{
 .container{
     background-color: #ffffff;
     width: 900px;
-    height: 700px;
+    height: 730px;
     padding: 50px 30px;
     margin: 20px;
     position: absolute;
@@ -94,21 +94,26 @@ body{
     border-radius: 8px;
     box-shadow:  0 20px 25px rgba(0,0,0,0.25);
 }
+
+.container[class="container contacts"]{
+    background-color: #ffffff;
+    width: 100%;
+    height: 730px;
+    padding: 50px 30px;
+    margin: 20px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 60%;
+    border-radius: 8px;
+    box-shadow:  0 20px 25px rgba(0,0,0,0.25);
+}
+
 .container *{
     font-family: "Poppins",sans-serif;
     font-size: 16px;
 }
-textarea{
-    display: block;
-    width: 100%;
-    height: 35%;
-    resize: none;
-    padding: 20px;
-    color: #202020;
-    border: 1.5px solid #b2b2b2;
-    border-radius: 5px;
-    outline: none;
-}
+
 p{
     width: 100%;
     text-align: right;
@@ -120,9 +125,8 @@ h1{
     text-align: center;
 }
 
-input[type=submit]{
-    display: block;
-    width: 100%;
+input[type=number]{
+    width: 59%;
     resize: none;
     padding: 10px;
     color: #202020;
@@ -132,9 +136,16 @@ input[type=submit]{
     cursor: pointer;
 }
 
-input[type=submit]:hover {
-    background-color: #b89999;
-    transition: background-color 0.2s;
+textarea{
+    display: block;
+    width: 100%;
+    height: 35%;
+    resize: none;
+    padding: 20px;
+    color: #202020;
+    border: 1.5px solid #b2b2b2;
+    border-radius: 5px;
+    outline: none;
 }
 
 .button[class="add button"] {
@@ -153,8 +164,8 @@ input[type=submit]:hover {
     transition: background-color 0.2s;
 }
 
-input[type=number]{
-    width: 79%;
+.button[class="contact button"] {
+    width: 20%;
     resize: none;
     padding: 10px;
     color: #202020;
@@ -162,6 +173,28 @@ input[type=number]{
     border-radius: 5px;
     outline: none;
     cursor: pointer;
+} 
+
+.button[class="contact button"]:hover {
+    background-color: #b89999;
+    transition: background-color 0.2s;
+}
+
+input[type=submit]{
+    display: block;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    color: #202020;
+    border: 1.5px solid #b2b2b2;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #b89999;
+    transition: background-color 0.2s;
 }
 
 .goback {

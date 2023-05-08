@@ -68,7 +68,7 @@ $stmt->close();
     </div>
 
     <div class="container">
-        <h1> Unsent Messages </h1>
+        <h1> Broadcast Unsent Messages </h1>
         <br>
         <form action="" method="post">
 

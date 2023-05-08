@@ -6,7 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-$DATABASE_HOST = 'localhost';                                                                      
+$DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'officialsms'; //database name
@@ -44,46 +44,40 @@ $stmt->close();
         </div>
     </nav>
 
-    <div class="menu">
-    <h1> Main Menu </h1>
-        <br></br>
 
-        <a href="sms.php"><button type="button" class="sms button"> Create New Message </button></a>
-        <br></br>
-        <a href="smsinbox.php"><button type="button" class="sms button"> Inbox </button></a>
-        <br></br>
-        <a href="smssent.php"><button type="button" class="sms button"> Sent Messages </button></a>
-        <br></br>
-        <a href="smsunsent.php"><button type="button" class="sms button"> Unsent Messages </button></a>
-        <br></br>
-        <a href="smsqueued.php"><button type="button" class="sms button"> Queued Messages </button></a>
-        <br></br>
-        <a href="smsbroadcast.php"><button type="button" class="sms button"> Broadcast Messages </button></a>
-        <br></br>
-        <a href="smsbroadcastsent.php"><button type="button" class="sms button"> Broadcast Sent Messages </button></a>
-        <br></br>
-        <a href="smsbroadcastunsent.php"><button type="button" class="sms button"> Broadcast Unsent Messages </button></a>
-        <br></br>
 
-    </div>
-
-    <div class="container">
-        <h1> Unsent Messages </h1>
+    <div class="container contacts">
+        <a class="goback" href="sms.php"> Back </a>
+        <br></br>
+        <h1> Search Contact(s) </h1>
         <br>
         <form action="" method="post">
 
-          
+            <label> Firstname: </label>
+            <input type="text" name="firstname" required>
+            <br></br>
+
+            <label> Lastname: </label>
+            <input type="text" name="lastname" required>
+            <br></br>
+
+            <label> Group Name: </label>
+            <input type="text" name="groupname" required> 
+            <br></br>
+
+            <button type="search" class="search button"> Search </button>
+
+            <button type="clear" class="clear button"> Clear </button>
+            <br></br>
 
         </form>
 
+
+
         <?php
-      
+
         ?>
-
-        
-
     </div>
-    
 
 </body>
 
