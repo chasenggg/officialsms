@@ -70,17 +70,25 @@ $stmt->close();
     <div class="container">
         <h1> Inbox </h1>
         <br>
-        <form action="" method="post">
+        <table action="" method="post">
+            <tr>  
+                <th> From </th>
+                <th> Mobile # </th>
+                <th> Text Message </th>
+                <th> Date/Time Received </th>
+            </tr>
+            <tr>
+                <th> Chasey Elizarde </th>
+                <th> 09150174133 </th>
+                <th> test message </th>
+                <th> 5/19/2023 11:25:50 AM </th>
+            </tr>
 
-          
-
-        </form>
-
+        </table>
+        
         <?php
       
         ?>
-
-        
 
     </div>
     

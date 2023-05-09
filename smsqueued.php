@@ -70,11 +70,27 @@ $stmt->close();
     <div class="container">
         <h1> Queued Messages </h1>
         <br>
-        <form action="" method="post">
+        <table action="" method="post">
+            <tr>  
+                <th> Ticket # </th>
+                <th> Sent By </th>
+                <th> Recipient </th>
+                <th> Mobile # </th>
+                <th> text Message </th>
+                <th> Date/Time Created </th>
+                
+            </tr>
 
-          
+            <tr>
+                <th> 5/9/2023 11:41:50 AM </th>
+                <th> <a href="smsqueued.php"><button type="button" class="sms button"> View </button></a> </th>
+            </tr>
 
-        </form>
+            <p> 1 - 3 of 3 Messages (number of messages queued) </p>
+            <p> Now serving ticket number 16487 </p>
+
+            
+        </table>
 
         <?php
       

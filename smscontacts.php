@@ -48,9 +48,8 @@ $stmt->close();
 
     <div class="container contacts">
         <a class="goback" href="sms.php"> Back </a>
-        <br></br>
         <h1> Search Contact(s) </h1>
-        <br>
+        <br></br>
         <form action="" method="post">
 
             <label> Firstname: </label>
@@ -70,7 +69,29 @@ $stmt->close();
             <button type="clear" class="clear button"> Clear </button>
             <br></br>
 
+            <table action="" method="post">
+            <h1> Search Result(s) </h1>
+            <tr>  
+                <th> Select </th>
+                <th> Name </th>
+                <th> Mobile # </th>
+                <th> Department </th>
+            </tr>
+            <tr>
+                <th> <input type="checkbox" id="" name="" value=""> </th>
+                <th> Chasey Elizarde </th>
+                <th> 09151515464564 </th>
+                <th> IT Department </th>
+            </tr>
+
+
+            
+
+        </table>
+
         </form>
+    
+        
 
 
 

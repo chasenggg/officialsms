@@ -6,7 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-$DATABASE_HOST = 'localhost';                                                                      
+$DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'officialsms'; //database name
@@ -45,7 +45,7 @@ $stmt->close();
     </nav>
 
     <div class="menu">
-    <h1> Main Menu </h1>
+        <h1> Main Menu </h1>
         <br></br>
 
         <a href="sms.php"><button type="button" class="sms button"> Create New Message </button></a>
@@ -73,8 +73,6 @@ $stmt->close();
         <form action="" method="post">
 
             <input type="number" name="number" onKeyPress="if(this.value.length==11) return false;" id="contact-input" placeholder="Input number here..">
-
-            <a href="smscontacts.php"><button type="button" class="contact button"> Contacts </button></a>
 
             <button type="button" class="add button" onclick="addContact()"> Add </button>
             <br></br>
@@ -117,8 +115,6 @@ $stmt->close();
             //echo " </fieldset>";
         }
         ?>
-
-
 
     </div>
     <script src="script.js"></script>

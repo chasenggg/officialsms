@@ -71,7 +71,23 @@ $stmt->close();
         <h1> Sent Messages </h1>
         <br>
         <form action="" method="post">
+        <table action="" method="post">
+            <tr>  
+                <th> Sent By </th>
+                <th> Recipient </th>
+                <th> Mobile # </th>
+                <th> Text Messages </th>
+                <th> Date/Time Sent </th>
+            </tr>
+            <tr>
+                <th> Chasey Elizarde </th>
+                <th> Cherry  </th>
+                <th> 09150174133 </th>
+                <th> text messages </th>
+                <th> 5/19/2023 11:25:50 AM </th>
+            </tr>
 
+        </table>
           
 
         </form>
