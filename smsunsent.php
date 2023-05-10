@@ -5,23 +5,6 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
     exit;
 }
-
-$DATABASE_HOST = 'localhost';                                                                      
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'officialsms'; //database name
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-if (mysqli_connect_errno()) {
-    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
-
-$stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
-$stmt->bind_param('i', $_SESSION['id']);
-$stmt->execute();
-$stmt->bind_result($password, $email);
-$stmt->fetch();
-$stmt->close();
-
 ?>
 
 <head>
@@ -45,7 +28,7 @@ $stmt->close();
     </nav>
 
     <div class="menu">
-    <h1> Main Menu </h1>
+        <h1> Main Menu </h1>
         <br></br>
 
         <a href="sms.php"><button type="button" class="sms button"> Create New Message </button></a>
@@ -71,7 +54,7 @@ $stmt->close();
         <h1> Unsent Messages </h1>
         <br>
         <table action="" method="post">
-            <tr>  
+            <tr>
                 <th> Date/Time of Error </th>
                 <th> Option </th>
             </tr>
@@ -80,15 +63,10 @@ $stmt->close();
                 <th> 5/9/2023 11:41:50 AM </th>
                 <th> <a href="smsunsent.php"><button type="button" class="sms button"> View </button></a> </th>
             </tr>
-            
+
         </table>
 
-        <?php
-      
-        ?>
     </div>
-    
-
 </body>
 
 </html>
