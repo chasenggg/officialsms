@@ -6,22 +6,6 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'officialsms'; //database name
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-if (mysqli_connect_errno()) {
-    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
-
-$stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
-$stmt->bind_param('i', $_SESSION['id']);
-$stmt->execute();
-$stmt->bind_result($password, $email);
-$stmt->fetch();
-$stmt->close();
-
 ?>
 
 <head>
@@ -75,8 +59,8 @@ $stmt->close();
         <form action="" method="post">
             <div class="contact">
                 <div class="top">
-                    <span class="country">+639</span>
-                    <input type="number" name="number" id="contact-input" onKeyPress="if(this.value.length==11) return false;" placeholder="Input number here..">
+                    <img src="./img/ph-flag.png" alt="ph-flag"><span class="country">+639</span>
+                    <input type="number" name="number" id="contact-input" onKeyPress="if(this.value.length==9) return false;" placeholder="Input number here..">
                     <button type="button" class="add-button" onclick="addContact()">Add</button>
                 </div>
                 <div class='d-flex justify-content-end'>
@@ -120,6 +104,7 @@ $stmt->close();
         */
 
         if (isset($_POST['submit'])) {
+            echo "+639"; 
             $number = $_POST['numbers'];
             // echo "<fieldset> <legend> Recipient </legend>";
             echo $number;

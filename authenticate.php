@@ -46,7 +46,23 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 
     <body>
         <br> <br>
+
+        <div class="container login">
+
+        <div class="signin">
+            <form action="authenticate.php" method="post">
+                <h2> Perpetual Help Medical Center - Las Piñas Hospital </h2>
+
+                <input type="login" name="username" placeholder="Username" id="username" required>
+
+                <input type="password" name="password" placeholder="Password" id="password" required>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
         <a class="goback" href="login.php"> Back </a>
+    </div>
+        
 
     </body>
 
